@@ -1,0 +1,10 @@
+<h1>Welcome to Minesweeper!</h1>
+
+
+<% (0..7).each do |row| %>
+  <% (0..7).each do |column| %>
+    <% Cell.create(row, column) %>
+    <%= link_to image_tag("#{@game.display(Cell.find_by(row: row, column: column))}"), "/play", method: :post %>
+
+  <% end %>
+<% end %>
