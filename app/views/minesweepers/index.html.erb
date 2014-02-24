@@ -3,8 +3,11 @@
 
 <% (0..7).each do |row| %>
   <% (0..7).each do |column| %>
-    <% Cell.create(row, column) %>
-    <%= link_to image_tag("#{@game.display(Cell.find_by(row: row, column: column))}"), "/play", method: :post %>
-
+    <form action="/play" method="post">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"/>
+      <input type="hidden" name="game" value="@game"/>
+      <input type="textarea" cols="1" rows="1" value="user_input" />
+    </form>
   <% end %>
+  <br/>
 <% end %>

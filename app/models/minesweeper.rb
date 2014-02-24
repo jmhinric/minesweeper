@@ -1,7 +1,5 @@
 class Minesweeper
   def initialize(rows, columns, mines)
-    # @board = Array.new(rows) {Array.new(columns)}
-    # self.set_board(rows,columns)
     @rows = rows
     @columns = columns
     @number_of_mines = mines
@@ -76,11 +74,7 @@ class Minesweeper
   end
 
   def flipped?(row, column)
-    if self.flipped_cells.include? [row, column]
-      return true
-    else
-      return false
-    end
+    self.flipped_cells.include? [row, column]
   end
 
   def flip(row, column)
