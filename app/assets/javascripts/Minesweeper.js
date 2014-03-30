@@ -6,7 +6,7 @@ function Game(rows, columns, mines) {
 }
 
 Game.prototype.setMines = function(){
-    
+  
 };
 
   
