@@ -1,13 +1,13 @@
 class Minesweeper
-  def initialize(rows, columns, mines)
-    @rows = rows
-    @columns = columns
-    @number_of_mines = mines
-    @cells_with_mines = []
-    @flipped_cells = []
-    @flagged_cells = []
-    @game_over = false
-  end
+  # def after_initialize(rows, columns, mines)
+  #   @rows = rows
+  #   @columns = columns
+  #   @number_of_mines = mines
+  #   @cells_with_mines = []
+  #   @flipped_cells = []
+  #   @flagged_cells = []
+  #   @game_over = false
+  # end
 
   def rows
     return @rows

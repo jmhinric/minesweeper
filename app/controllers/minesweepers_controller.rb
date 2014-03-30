@@ -1,8 +1,9 @@
 class MinesweepersController < ApplicationController
-  include Minesweeper
+  # include MinesweeperHelper
 
   def index
-    @game = Minesweeper.initialize(8,8,10)
+    @game = Minesweeper.new
+    @game.after_initialize
     render :new
   end
 
