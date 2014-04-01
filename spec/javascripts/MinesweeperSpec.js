@@ -7,7 +7,7 @@ describe("Game", function() {
   describe("#setMines", function() {
     it("randomly sets the mines for the game", function() {
       game.setMines();
-      expect(game.mineCells.count).toBe(10);
+      expect(game.mineCells.length).toBe(10);
     });
   });
 });
